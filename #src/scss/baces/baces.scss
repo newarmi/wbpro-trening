@@ -1,0 +1,63 @@
+.page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+	}
+	&__sreen{
+		flex: 0 1 100%;
+		position: relative;
+		box-sizing: border-box;
+		min-height: 100vh;
+		padding: 50px 0px 0px 0px;
+		@media (min-width: 960px) {
+			padding: 70px 0px 0px 0px;
+		}
+	}
+	&__pagination {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__bullet{
+		width: 10px;
+		height: 10px;
+		border-radius: 50% ;
+		background: #C4C4C4;
+		margin: 6px 0;
+		transition: background .6s ease-in-out;
+		cursor: pointer;
+		&_active{
+			background: $purple;
+		}
+	}
+	&__scroll {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 4px;
+		height: 100%;
+		background: rgba(0,0,0,.2);
+	}
+	.page__drag-scroll{
+		position: absolute;
+		top: 0;left: 0;
+		width: 100%;
+		cursor: pointer;
+		background: rgba(0,0,0,.8);
+	}
+
+}
+
+
+

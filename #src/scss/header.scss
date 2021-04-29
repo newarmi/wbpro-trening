@@ -1,0 +1,178 @@
+.header {
+	position: fixed;
+	top: 0;left: 0;
+	z-index: 50;
+	width: 100%;
+	height: 50px;
+	background: #000;
+	@media (min-width: 960px) {
+		height: 70px;
+	}
+	@media (min-width: 1025px) {
+		padding: 0 15px;
+	}
+	box-sizing: border-box;
+	
+	
+	&__wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid $white;
+		position: relative;
+	}
+
+	&__logo {
+		margin: 0px 10px 0px 0px;
+		img{
+
+			width: 100px;
+			height: auto;
+			@media (min-width: 960px) {
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+	&__burger {
+		@media (min-width: 581px) {
+			display: none;
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		@media (min-width: 581px) {
+			position: static;
+			padding: 0;
+			max-width: 400px;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		@media (min-width: 416px) {
+			right: 0;
+		}
+	}
+}
+.nav {
+	background: rgba(0,0,0,.5);
+	transform: translateX(100%);
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease-in-out;
+	width: 100%;
+	margin: 51px 0px 0px 0px;
+	@media (min-width: 960px) {
+		max-width: 557px;
+	}
+	@media (min-width: 581px) {
+		margin: 0;
+		transform: translateY(0);
+	}
+	@media (min-width: 416px) {
+		transform: translateY(-100%);
+	}
+
+	&__list {
+		padding: 20px 5px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		box-sizing: border-box;
+		@media (min-width: 416px) {
+			justify-content: space-between;
+			flex-direction: row;
+			padding: 10px 5px;
+		}
+		@media (min-width: 581px) {
+			padding: 0;
+		}
+	}
+
+	&__item {
+		margin: 5px 0;
+		@media (min-width: 416px) {
+			margin: 0;
+		}
+	}
+
+	&__link {
+		font-size: 13px;
+		font-weight: 700;
+		transition: color .3s ease;
+		@media (min-width: 960px) {
+			font-size: 18px;
+		}
+		&:hover{
+			color: $purple;
+		}
+	}
+	&.active{
+		transform: translateY(0);
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+.burger {
+	width: 30px;
+	height: 17px;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	border: 0;
+	span{
+		background: $white;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		transition-property:  transform, top, bottom;
+		transition-duration: .2s, .2s, .2s;
+		transition-delay: 0s, .2s, .2s;
+	}
+	&__elem--top {
+		top: 0;
+	}
+
+	&__elem--midle {
+		top: 7px ;
+	}
+
+	&__elem--botton {
+		bottom: 0;
+	}
+	&.active{
+		span{
+			transition-property:  transform, top, bottom;
+			transition-duration: .2s, .2s, .2s;
+			transition-delay: .2s, 0s, 0s;
+		}
+		.burger__elem--top {
+			top: 7px;
+			transform: rotate(-45deg);
+			transform-origin: center center;
+		}
+	
+		.burger__elem--midle {
+			display: none;
+		}
+	
+		.burger__elem--botton {
+			bottom: 7px;
+			transform: rotate(45deg);
+			transform-origin: center center;
+		}
+	}
+}
+
+
