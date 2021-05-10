@@ -10,15 +10,19 @@
 </head>
 
 <body>
-
+	<svg display="none">
+		<symbol id="arrow" viewBox="0 0 25 25">
+			<path d="M0 0L25 12.5L0 25L19.8276 12.5L0 21.875L16.3793 12.5L0 3.125L19.8276 12.5L0 0Z" />
+	</svg>
 	@@include('html/_header.html')
+	@@include('html/_popup.html')
+
 	<main class="page">
 		<div class="page__wrapper">
 			@@include('html/_main.html')
-			@@include('html/_main.html')
-			@@include('html/_main.html')
-			@@include('html/_main.html')
-			@@include('html/_main.html')
+			@@include('html/_about.html')
+			@@include('html/_tariff.html')
+			@@include('html/_speek.html')
 		</div>
 		<div class="page__pagination">
 
@@ -27,7 +31,7 @@
 	</main>
 
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="js/script.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
