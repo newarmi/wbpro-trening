@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<svg display="none">
+		<symbol id="arrow" viewBox="0 0 25 25">
+			<path d="M0 0L25 12.5L0 25L19.8276 12.5L0 21.875L16.3793 12.5L0 3.125L19.8276 12.5L0 0Z" />
+		</symbol>
+	</svg>
+	<svg display="none">
+		<symbol id="send" viewBox="0 0 25 25">
+			<path xmlns="http://www.w3.org/2000/svg"
+				d="M12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M15.1464466,9.14644661 C15.3417088,8.95118446 15.6582912,8.95118446 15.8535534,9.14644661 C16.0488155,9.34170876 16.0488155,9.65829124 15.8535534,9.85355339 L10.8535534,14.8535534 C10.6582912,15.0488155 10.3417088,15.0488155 10.1464466,14.8535534 L8.14644661,12.8535534 C7.95118446,12.6582912 7.95118446,12.3417088 8.14644661,12.1464466 C8.34170876,11.9511845 8.65829124,11.9511845 8.85355339,12.1464466 L10.5,13.7928932 L15.1464466,9.14644661 Z" />
+		</symbol>
+	</svg>
+	<svg display="none">
+		<symbol id="krest" viewBox="0 0 220.496 220.496">
+			<path
+				d="M0.003,192.658c0,7.434,2.897,14.424,8.154,19.684c5.257,5.261,12.25,8.154,19.684,8.154
+			c7.44,0,14.429-2.894,19.674-8.154l62.732-62.731l62.717,62.72c5.255,5.26,12.244,8.154,19.684,8.154
+			c7.44,0,14.436-2.895,19.678-8.154c5.255-5.26,8.155-12.25,8.155-19.684s-2.9-14.424-8.155-19.684l-62.714-62.717l62.727-62.727
+			c5.254-5.257,8.154-12.247,8.154-19.681c0-7.434-2.9-14.427-8.154-19.684C207.084,2.897,200.095,0,192.655,0
+			c-7.435,0-14.424,2.897-19.678,8.155l-62.724,62.732L47.522,8.155C42.271,2.897,35.281,0,27.847,0
+			c-7.44,0-14.433,2.897-19.684,8.155c-5.257,5.257-8.155,12.25-8.155,19.684c0,7.434,2.897,14.423,8.155,19.681l62.732,62.727
+			L8.157,172.974C2.9,178.234,0.003,185.224,0.003,192.658z M16.858,181.681l67.08-67.086c1.156-1.152,1.801-2.714,1.801-4.344
+			c0-1.631-0.646-3.198-1.801-4.348l-67.08-67.08c-2.939-2.936-4.552-6.836-4.552-10.985c0-4.152,1.618-8.056,4.552-10.989
+			c2.939-2.933,6.831-4.552,10.989-4.552c4.149,0,8.055,1.619,10.98,4.552l67.079,67.077c2.306,2.306,6.39,2.306,8.695,0
+			l67.07-67.077c5.867-5.873,16.104-5.861,21.972,0c2.937,2.939,4.552,6.836,4.552,10.989c0,4.149-1.615,8.056-4.552,10.985
+			l-67.073,67.074c-2.402,2.404-2.402,6.29,0,8.697l67.062,67.056c2.936,2.937,4.545,6.84,4.545,10.989s-1.609,8.053-4.551,10.988
+			c-5.85,5.867-16.094,5.873-21.966,0l-67.059-67.056c-2.405-2.407-6.29-2.407-8.695,0l-67.085,67.08
+			c-5.846,5.866-16.09,5.872-21.962,0c-2.939-2.937-4.552-6.84-4.552-10.989C12.307,188.515,13.919,184.612,16.858,181.681z" />
+		</symbol>
+	</svg>
+
+
+	<header class="header">
+	<div class="header__wrapper">
+		<div class="header__logo">
+			<img src="img/logo.svg" alt="logo">
+		</div>
+		<button class="header__burger burger">
+			<span class="burger__elem--top"></span>
+			<span class="burger__elem--midle"></span>
+			<span class="burger__elem--botton"></span>
+		</button>
+		<nav class="header__nav nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Это про тебя?</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Как это работает</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">О курссе</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Тарифы</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Спикер</a></li>
+				<!-- <li class="nav__item"><a href="#" class="nav__link">Наша команда</a></li> -->
+			</ul>
+		</nav>
+	</div>
+</header>
+	<div id="simpl" class="popup">
+	<div class="popup__title">
+		<h3>Просто Курс</h3>
+	</div>
+	<ul class="popup__list">
+		<li class="popup__item">12 уроков</li>
+		<li class="popup__item">Бонусные материалы</li>
+		<li class="popup__item">Доступ к урокам на 6 месяцев</li>
+		<li class="popup__item">Чат с поддержкой кураторов</li>
+		<li class="popup__item">Домашние задания с проверкой</li>
+		<li class="popup__item">Именной сертификат о прохождении курса</li>
+		<li class="popup__item">Финальная встреча с группой</li>
+	</ul>
+</div>
+<div id="individd" class="popup">
+	<div class="popup__title">
+		<h3>Индивидуальное Наставничество</h3>
+	</div>
+	<ul class="popup__list">
+		<li class="popup__item">12 уроков</li>
+		<li class="popup__item">Бонусные материалы</li>
+		<li class="popup__item">Доступ к урокам на 6 месяцев</li>
+		<li class="popup__item">Чат с поддержкой кураторов</li>
+		<li class="popup__item">Домашние задания с проверкой</li>
+		<li class="popup__item">Именной сертификат о прохождении курса</li>
+		<li class="popup__item">Финальная встреча с группой</li>
+		<li class="popup__item">100 лайков для вашего бренда</li>
+		<li class="popup__item">30 автовыкупов любой категории товара</li>
+		<li class="popup__item">Подбор ключевых тегов для 10 карточек</li>
+		<li class="popup__item">4 созвона с экспертами и группой в ZOOM</li>
+		<li class="popup__item">Фиксация и отслеживание ваших результатов и мотивация</li>
+		<li class="popup__item">Доступ в закрытый VIP-чат с экспертами</li>
+		<li class="popup__item">Личный куратор на курсе</li>
+		<li class="popup__item">Аудит карточек товара от Лео (до 10 шт.)</li>
+		<li class="popup__item">2 индивидуальных созвона с Лео</li>
+	</ul>
+</div>
+
+	<main class="page">
+		<div class="page__wrapper">
+			<section class="page__sreen main">
+	<div class="main__conteiner">
+		<div class="main__text--block">
+			<div class="main__title">
+				<h1>В топе на маркетплейсе</h1>
+			</div>
+			<div class="main__desk">
+				<p>Пошаговая стратегия вывода товара в ТОП и увеличения продаж на маркетплейсах</p>
+			</div>
+			<div class="main__text">
+				<p>Вы научитесь работать со звуком: от записи до сведения и мастеринга. Сможете озвучивать видео, писать
+					саундтреки и заниматься звукорежиссурой. Соберёте портфолио и получите востребованную профессию.</p>
+			</div>
+			<div class="main__button">
+				<button><span>Записаться</span><svg class="arrow">
+						<use xlink:href="#arrow"></use>
+					</svg></button>
+			</div>
+		</div>
+		<div class="main__img--block">
+			<img src="img/img-main.jpg" alt="Красивая девушка с ноутбуком">
+		</div>
+	</div>
+</section>
+			<section class="page__sreen about-you">
+	<div class="about-you__title">
+		<h2>Это про тебя?</h2>
+	</div>
+	<div class="about-you__conteiner">
+		<div class="about-you-content">
+			<ul class="about-you-content__list">
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Твои товары поселились на
+						последних страницах поиска</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Вышел на Wildberries, а продажи
+						не
+						такие, как ждал</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Клиенты покупают у других, а тебя
+						как будто не замечают</span>
+				</li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Незнаешь, как вывести свой товар
+						в
+						топ выдачи</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Новые товары продаются не так
+						хорошо, как старые</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Пошаговая стратегия вывода товара
+						в ТОП и увеличения продаж наr
+						маркетплейсах</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Тратишь деньги на рекламу, но
+						результат не окупается</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Не понимаешь, как удержать
+						позицию, когда товар закончился на
+						складе</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Не знаешь, как точно посчитать
+						прибыльность проекта</span></li>
+				<li class="about-you-content__item"><img src="img/arrow2.svg" alt=""><span>Мечтаешь автоматизировать
+						процессы</span></li>
+			</ul>
+		</div>
+	</div>
+</section>
+			<section class="page__sreen roadmap">
+	<div class="line--left2right line"></div>
+	<div class="line--top2bottom line"></div>
+	<div class="line--right2left line"></div>
+
+	<div class="roadmap__item roademap-item --top-left">
+		<div class="roademap-item__img">
+			<img src="img/man.svg" alt="man">
+		</div>
+		<div class="roademap-item__text">
+			<p> biu uu i o u o ibuoibiub ijjbou h ouubohh ihobi uubi iubj ibo oibojjb hb</p>
+		</div>
+	</div>
+	<div class="roadmap__item roademap-item --center-left">
+		<div class="roademap-item__img">
+			<img src="img/man.svg" alt="man">
+		</div>
+		<div class="roademap-item__text">
+			<p> biu uu i o u o ibuoibiub ijjbou h ouubohh ihobi uubi iubj ibo oibojjb hb</p>
+		</div>
+	</div>
+	<div class="roadmap__item roademap-item --bottom-center">
+		<div class="roademap-item__img">
+			<img src="img/man.svg" alt="man">
+		</div>
+		<div class="roademap-item__text">
+			<p> biu uu i o u o ibuoibiub ijjbou h ouubohh ihobi uubi iubj ibo oibojjb hb</p>
+		</div>
+	</div>
+	<div class="roadmap__item roademap-item --top-right">
+		<div class="roademap-item__img">
+			<img src="img/man.svg" alt="man">
+		</div>
+		<div class="roademap-item__text">
+			<p> biu uu i o u o ibuoibiub ijjbou h ouubohh ihobi uubi iubj ibo oibojjb hb</p>
+		</div>
+	</div>
+	<div class="roadmap__item roademap-item --bottom-right">
+		<div class="roademap-item__img">
+			<img src="img/man.svg" alt="man">
+		</div>
+		<div class="roademap-item__text">
+			<p> biu uu i o u o ibuoibiub ijjbou h ouubohh ihobi uubi iubj ibo oibojjb hb</p>
+		</div>
+	</div>
+	<div class="roadmap__item roademap-item --bottom-left">
+		<div class="roademap-item__img">
+			<img src="img/man.svg" alt="man">
+		</div>
+		<div class="roademap-item__text">
+			<p> biu uu i o u o ibuoibiub ijjbou h ouubohh ihobi uubi iubj ibo oibojjb hb</p>
+		</div>
+	</div>
+	<div class="final">
+		<img src="img/man.svg" alt="">
+	</div>
+</section>
+
+			<section id="tariff" class="page__sreen about">
+	<div class="about__conteiner">
+		<div class="about__title">
+			<h2>Программа обучения</h2>
+		</div>
+		<div class="about-slider">
+			<ul class="about-slider__wrapper">
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Тайны ранжирования товаров</h3>
+
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Как товары попадают в ТОП? Какие есть факторы попадания на лидирующие позиции и как они
+									влияют?
+									Насколько правильно ты всё делаешь относительно факторов ранжирования?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Провели аудит товаров и исправили ошибки, чтобы ты точно выбился в
+									топ.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Святая аналитика</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Почему грамотный анализ – 50% вашего успеха? Какие сервисы для сбора необходимых нам данных
+									существуют? Как их подключить, чтобы грамотно вести через них работу? Как фиксировать позиции
+									в
+									рейтинге через аналитический центр?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Сделал детальный анализ всех конкурентов и теперь знаешь, как сделать
+									свой товар лучше.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>ФОТО всему голова</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Как контент влияет на продажи? Какие фотографии выбрать и как их делать? Почему 3D модель
+									товара
+									— топ, и как это использовать? Возможно ли сделать воронку продаж только с помощью
+									фотографий?
+								</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Провёл аудит контента и понял, какие снимки тебе необходимы. Создал
+									воронку продаж из фото и инфографики.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Видео – инструмент победителей</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Как наличие видео влияет на конверсию в продажу? Почему карточки без них ранжируются хуже?
+									Как
+									сделать продающий видеообзор к товару?
+								</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Увеличил свою конверсию в покупку минимум на 1% только благодаря
+									видео.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Выигрышная спецификация</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Что такое спецификация и как она нам помогает? Как грамотно выделиться на фоне других
+									товаров?
+									Почему некоторые ошибки срочно надо исправлять?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Проработанная спецификация товара, с помощью которой клиенты тебя
+									находят
+									по самым востребованным запросам.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>SEO – три важные буквы</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Что такое SEO оптимизация и зачем она нужна? Как сделать коллекцию ключевых слов, которые
+									будут
+									работать? Как проставить теги к товару? Как провести грамотную оптимизацию?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span> Спарсили ключевые запросы по твоему товару и сгенерировали ключевые
+									слова, которые будут работать</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Встречают по одёжке</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Что такое имидж бренда и зачем он нужен? Как его создать и не потерять? Что влияет на наш
+									имидж
+									на маркетплейсах?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Прокачали твой бренд с помощью лояльного маркетинга и спасли тебя от
+									глупых ошибок</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Вперёд к ТОПу</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Почему ТОП — это круто? Как вывести свою карточку товара на заветную первую страницу и делать
+									это постоянно?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Разработали стратегию для вывода карточки товара в ТОП, эффективно
+									подключили внутренний и внешний маркетинг.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item ">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Нет в наличии = конец?</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Что делать, если товар на складе закончился? Как сделать так, чтобы карточка товара не
+									потеряла
+									своих позиций? Почему "Нет в наличии" — не приговор?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Удержал или увеличил рейтинг товара, даже если он уже закончился.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Конкуренция и отсутствие её</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Какая методика работы с товаром в перегретых нишах? Какие есть способы обогнать даже тех, кто
+									уже давно на первых страницах по запросу? Что делать, чтобы сформировать рынок на новый
+									товар?
+								</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Ты обогнал своих конкурентов и получил лидирующие позиции.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Дополнительные способы увеличения продаж</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Когда нужно использовать данные способы? Как выстроить грамотный план для крутых продаж?
+									Какие
+									стратегии для увеличения дохода существуют?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Ты узнал, какие действия нужно выполнить, чтобы увеличить свой
+									заработок.
+								</p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="about-slider__item about-slider-item">
+					<div class="about-slider-item__inner">
+						<div class="about-slider-item__title">
+							<h3>Подводим итоги</h3>
+						</div>
+						<div class="about-slider-item__icon">
+							<img src="img/plus.svg" alt="icon-plus">
+						</div>
+						<div class="about-slider-item__hid">
+							<div class="about-slider-item__text">
+								<p>Какими способами можно оценить эффективность нашей работы? Зачем нужно анализировать
+									результаты?
+									Как провести финальный аудит карточки? Как делегировать работу, чтобы спать спокойно?</p>
+							</div>
+							<div class="about-slider-item__rezult">
+								<p><span>Результат:</span>Подвели итоги курса и поставили планы по масштабированию.
+									Поаплодировали
+									себе за крутой результат.</p>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</section>
+			<section class="page__sreen tariff">
+
+	<div class="tariff__conteiner">
+		<div class="tariff__title">
+			<h2>Тарифы</h2>
+		</div>
+		<div class="tariff__cards cards">
+			<div class="cards__item">
+				<div class="cards__card--left card --front">
+					<div class="card__title">
+						<h3>Просто курс</h3>
+					</div>
+					<div class="card__img">
+						<img src="img/icon-lamp.svg" alt="icon-lamp">
+					</div>
+					<button href="simpl" class="card__button">
+						Подробнее...
+					</button>
+					<div class="card__price">
+						<span>49.990 ₽</span>
+					</div>
+					<button class="card__button-write"><span>Записаться</span>
+						<svg class="arrow">
+							<use xlink:href="#arrow"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="cards__card--left card --back">
+					<a href="#" class="closs-catr">
+						<svg class=" krest krest-right">
+							<use xlink:href="#krest"></use>
+						</svg>
+					</a>
+					<form data-tariff="Просто курс" class="form form--left" action="#">
+						<div class="form__title">
+							<h3>Запись на курс</h3>
+						</div>
+						<input type="text" hidden class="form__key">
+						<div class="form__input">
+							<input placeholder="Ваше имя" class="form__name" type="text">
+						</div>
+						<div class="form__input">
+							<input placeholder="Ваш номер" class="form__tel" type="tel">
+						</div>
+						<div class="form__button">
+							<input type="submit" placeholder="Ваш номер">
+						</div>
+						<svg class="send send--left">
+							<use xlink:href="#send"></use>
+						</svg>
+					</form>
+				</div>
+			</div>
+			<div class="cards__item">
+				<div class="cards__card--right card --front">
+					<div class="card__title">
+						<h3>Индивидуальное Наставничество</h3>
+					</div>
+					<div class="card__img">
+						<img src="img/icon-teach.svg" alt="icon-teach">
+					</div>
+					<button href="individd" class="card__button">
+						Подробнее...
+					</button>
+					<div class="card__price">
+						<span>49.990 ₽</span>
+					</div>
+					<button class="card__button-write"><span>Записаться</span>
+						<svg class="arrow arrow--right">
+							<use xlink:href="#arrow"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="cards__card--right card --back">
+					<a href="#" class="closs-catr">
+						<svg class="krest">
+							<use xlink:href="#krest"></use>
+						</svg>
+					</a>
+					<form data-tariff="Индивидуальное Наставничество" class="form form--right" action="#">
+						<div class="form__title">
+							<h3>Запись на курс</h3>
+						</div>
+						<input type="text" hidden class="form__key">
+						<div class="form__input">
+							<input placeholder="Ваше имя" class="form__name" type="text">
+						</div>
+						<div class="form__input">
+							<input placeholder="Ваш номер" class="form__tel" type="tel">
+						</div>
+						<div class="form__button">
+							<input type="submit" placeholder="Ваш номер">
+						</div>
+						<svg class="send send--right">
+							<use xlink:href="#send"></use>
+						</svg>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+			<section class="page__sreen speek">
+	<div class="speek__conteiner">
+		<div class="speek__title">
+			<h2>О Спикере</h2>
+		</div>
+		<div class="speek__content speek-content">
+			<div class="speek-content__img">
+				<img src="img/roma.png" alt="Roma">
+			</div>
+			<div class="speek-content__text">
+				<p>Реализует товары на маркетплейсах с 2016 года.</p>
+				<p>Владелец фабрики одежды и 5 брендов соборотом более 500 млн.рублей.</p>
+				<p>Обучил более 1000 предпринимателей ведению бизнеса.</p>
+				<p>Владелец фабрики одежды и 5 брендов</p>
+				<p>Обучил более 1000 предпринимателей ведению бизнеса.Сертифицированный бизнес коуч ICF, ICA, бизнес
+					тренер с 9 летним стажем.</p>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+		</div>
+		<div class="page__pagination">
+
+		</div>
+		<div class="page__scroll"></div>
+	</main>
+
+	<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+	<script src="js/script.min.js"></script>
+</body>
+<div class="opup-menu-item__content"></div>
+
+</html>
